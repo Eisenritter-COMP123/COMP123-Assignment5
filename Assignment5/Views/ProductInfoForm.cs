@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Assignment5
+namespace Assignment5.Views
 {
-    public partial class SelectForm : Form
+    public partial class ProductInfoForm : Form
     {
-        public SelectForm()
+        public ProductInfoForm()
         {
             InitializeComponent();
+        }
+
+        private void PIDLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

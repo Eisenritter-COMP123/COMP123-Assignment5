@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Assignment5
+namespace Assignment5.Views
 {
     public partial class StartForm : Form
     {

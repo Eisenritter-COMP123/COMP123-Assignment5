@@ -1,4 +1,4 @@
-﻿namespace Assignment5
+﻿namespace Assignment5.Views
 {
     partial class SplashScreen
     {
