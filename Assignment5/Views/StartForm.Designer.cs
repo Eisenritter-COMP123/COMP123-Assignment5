@@ -37,8 +37,8 @@
             // 
             // StartOrderButton
             // 
-            this.StartOrderButton.BackColor = System.Drawing.Color.Green;
-            this.StartOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartOrderButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.StartOrderButton.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartOrderButton.ForeColor = System.Drawing.Color.Transparent;
             this.StartOrderButton.Location = new System.Drawing.Point(12, 352);
             this.StartOrderButton.Name = "StartOrderButton";
@@ -50,8 +50,8 @@
             // 
             // LoadOrderButton
             // 
-            this.LoadOrderButton.BackColor = System.Drawing.Color.Green;
-            this.LoadOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadOrderButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.LoadOrderButton.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadOrderButton.ForeColor = System.Drawing.Color.Transparent;
             this.LoadOrderButton.Location = new System.Drawing.Point(12, 414);
             this.LoadOrderButton.Name = "LoadOrderButton";
@@ -63,8 +63,8 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.BackColor = System.Drawing.Color.Red;
-            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.BackColor = System.Drawing.Color.DarkRed;
+            this.ExitButton.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.Transparent;
             this.ExitButton.Location = new System.Drawing.Point(12, 476);
             this.ExitButton.Name = "ExitButton";
@@ -88,6 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(378, 544);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);

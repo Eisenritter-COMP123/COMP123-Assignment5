@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.SplashTimer = new System.Windows.Forms.Timer(this.components);
             this.WelcomeLabel = new System.Windows.Forms.Label();
             this.SplashProgressBar = new System.Windows.Forms.ProgressBar();
@@ -43,21 +42,22 @@
             // 
             // WelcomeLabel
             // 
-            this.WelcomeLabel.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.WelcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WelcomeLabel.BackColor = System.Drawing.Color.SteelBlue;
+            this.WelcomeLabel.Font = new System.Drawing.Font("Unispace", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WelcomeLabel.ForeColor = System.Drawing.Color.White;
-            this.WelcomeLabel.Location = new System.Drawing.Point(12, 291);
+            this.WelcomeLabel.Location = new System.Drawing.Point(12, 340);
             this.WelcomeLabel.Name = "WelcomeLabel";
-            this.WelcomeLabel.Size = new System.Drawing.Size(776, 74);
+            this.WelcomeLabel.Size = new System.Drawing.Size(1000, 110);
             this.WelcomeLabel.TabIndex = 0;
             this.WelcomeLabel.Text = "Welcome to Dollar Computers";
             this.WelcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SplashProgressBar
             // 
-            this.SplashProgressBar.Location = new System.Drawing.Point(20, 588);
+            this.SplashProgressBar.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.SplashProgressBar.Location = new System.Drawing.Point(31, 695);
             this.SplashProgressBar.Name = "SplashProgressBar";
-            this.SplashProgressBar.Size = new System.Drawing.Size(768, 40);
+            this.SplashProgressBar.Size = new System.Drawing.Size(992, 40);
             this.SplashProgressBar.TabIndex = 1;
             // 
             // ProgressTimer
@@ -68,15 +68,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 640);
+            this.BackgroundImage = global::Assignment5.Properties.Resources.fin_serv_tech;
+            this.ClientSize = new System.Drawing.Size(1024, 768);
             this.ControlBox = false;
             this.Controls.Add(this.SplashProgressBar);
             this.Controls.Add(this.WelcomeLabel);
             this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SplashScreen";
-            this.Opacity = 0.5D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";
             this.Load += new System.EventHandler(this.SplashScreen_Load);
