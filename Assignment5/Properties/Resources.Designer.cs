@@ -63,6 +63,16 @@ namespace Assignment5.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DividerLine {
+            get {
+                object obj = ResourceManager.GetObject("DividerLine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap E_Shop_512 {
             get {
                 object obj = ResourceManager.GetObject("E-Shop-512", resourceCulture);

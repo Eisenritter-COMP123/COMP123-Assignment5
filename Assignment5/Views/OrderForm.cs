@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
-
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +20,8 @@ namespace Assignment5.Views
 
         private void PrintToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           // ProductPrintForm.PrintAction = PrintAction.PrintToPreview;
+           ProductPrintForm.PrintAction = PrintAction.PrintToPreview;
+            ProductPrintForm.Print();
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -29,10 +29,6 @@ namespace Assignment5.Views
             Application.Exit();
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void ProductInfoGroupBox_Enter(object sender, EventArgs e)
         {
@@ -42,6 +38,16 @@ namespace Assignment5.Views
         private void PlatformLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// This is the event handler for the AboutToolStripMenuItem Click Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.Forms[FormNames.ABOUT_FORM].ShowDialog();
         }
     }
 }

@@ -63,7 +63,7 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.BackColor = System.Drawing.Color.DarkRed;
+            this.ExitButton.BackColor = System.Drawing.Color.Red;
             this.ExitButton.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.Transparent;
             this.ExitButton.Location = new System.Drawing.Point(12, 476);
