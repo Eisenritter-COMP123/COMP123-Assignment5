@@ -37,7 +37,7 @@
             // 
             // StartOrderButton
             // 
-            this.StartOrderButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.StartOrderButton.BackColor = System.Drawing.Color.LightSkyBlue;
             this.StartOrderButton.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartOrderButton.ForeColor = System.Drawing.Color.Transparent;
             this.StartOrderButton.Location = new System.Drawing.Point(12, 352);
@@ -50,7 +50,7 @@
             // 
             // LoadOrderButton
             // 
-            this.LoadOrderButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.LoadOrderButton.BackColor = System.Drawing.Color.LightSkyBlue;
             this.LoadOrderButton.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadOrderButton.ForeColor = System.Drawing.Color.Transparent;
             this.LoadOrderButton.Location = new System.Drawing.Point(12, 414);
@@ -88,7 +88,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Navy;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackgroundImage = global::Assignment5.Properties.Resources.fin_serv_tech;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(378, 544);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);

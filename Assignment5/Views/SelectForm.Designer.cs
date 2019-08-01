@@ -167,6 +167,7 @@
             // 
             this.CancelButton.BackColor = System.Drawing.Color.Red;
             this.CancelButton.Font = new System.Drawing.Font("Unispace", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelButton.ForeColor = System.Drawing.Color.White;
             this.CancelButton.Location = new System.Drawing.Point(1653, 917);
             this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CancelButton.Name = "CancelButton";
@@ -181,6 +182,7 @@
             this.NextButton.BackColor = System.Drawing.Color.SteelBlue;
             this.NextButton.Enabled = false;
             this.NextButton.Font = new System.Drawing.Font("Unispace", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.ForeColor = System.Drawing.Color.White;
             this.NextButton.Location = new System.Drawing.Point(1850, 917);
             this.NextButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NextButton.Name = "NextButton";

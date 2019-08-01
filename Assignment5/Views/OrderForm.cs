@@ -33,5 +33,10 @@ namespace Assignment5.Views
         {
             Application.Exit();
         }
+
+        private void ProductInfoGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
