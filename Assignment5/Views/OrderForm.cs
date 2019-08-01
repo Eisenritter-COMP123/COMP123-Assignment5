@@ -38,5 +38,10 @@ namespace Assignment5.Views
         {
 
         }
+
+        private void PlatformLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

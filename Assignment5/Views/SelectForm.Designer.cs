@@ -35,6 +35,7 @@
             this.HardwareText = new System.Windows.Forms.TextBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +67,6 @@
             this.mousttypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.MyProductDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -192,6 +192,10 @@
             this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Assignment5.Models.Product);
+            // 
             // productIDDataGridViewTextBoxColumn
             // 
             this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
@@ -211,7 +215,8 @@
             this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
             this.costDataGridViewTextBoxColumn.ReadOnly = true;
             this.costDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.costDataGridViewTextBoxColumn.Width = 78;
+            this.costDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.costDataGridViewTextBoxColumn.Width = 48;
             // 
             // manufacturerDataGridViewTextBoxColumn
             // 
@@ -221,7 +226,8 @@
             this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
             this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
             this.manufacturerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.manufacturerDataGridViewTextBoxColumn.Width = 140;
+            this.manufacturerDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.manufacturerDataGridViewTextBoxColumn.Width = 110;
             // 
             // modelDataGridViewTextBoxColumn
             // 
@@ -231,7 +237,8 @@
             this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
             this.modelDataGridViewTextBoxColumn.ReadOnly = true;
             this.modelDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.modelDataGridViewTextBoxColumn.Width = 88;
+            this.modelDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.modelDataGridViewTextBoxColumn.Width = 58;
             // 
             // rAMtypeDataGridViewTextBoxColumn
             // 
@@ -241,7 +248,8 @@
             this.rAMtypeDataGridViewTextBoxColumn.Name = "rAMtypeDataGridViewTextBoxColumn";
             this.rAMtypeDataGridViewTextBoxColumn.ReadOnly = true;
             this.rAMtypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.rAMtypeDataGridViewTextBoxColumn.Width = 119;
+            this.rAMtypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.rAMtypeDataGridViewTextBoxColumn.Width = 89;
             // 
             // rAMsizeDataGridViewTextBoxColumn
             // 
@@ -251,7 +259,8 @@
             this.rAMsizeDataGridViewTextBoxColumn.Name = "rAMsizeDataGridViewTextBoxColumn";
             this.rAMsizeDataGridViewTextBoxColumn.ReadOnly = true;
             this.rAMsizeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.rAMsizeDataGridViewTextBoxColumn.Width = 116;
+            this.rAMsizeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.rAMsizeDataGridViewTextBoxColumn.Width = 86;
             // 
             // displaytypeDataGridViewTextBoxColumn
             // 
@@ -261,7 +270,8 @@
             this.displaytypeDataGridViewTextBoxColumn.Name = "displaytypeDataGridViewTextBoxColumn";
             this.displaytypeDataGridViewTextBoxColumn.ReadOnly = true;
             this.displaytypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.displaytypeDataGridViewTextBoxColumn.Width = 134;
+            this.displaytypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.displaytypeDataGridViewTextBoxColumn.Width = 104;
             // 
             // screensizeDataGridViewTextBoxColumn
             // 
@@ -271,7 +281,8 @@
             this.screensizeDataGridViewTextBoxColumn.Name = "screensizeDataGridViewTextBoxColumn";
             this.screensizeDataGridViewTextBoxColumn.ReadOnly = true;
             this.screensizeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.screensizeDataGridViewTextBoxColumn.Width = 131;
+            this.screensizeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.screensizeDataGridViewTextBoxColumn.Width = 101;
             // 
             // resolutionDataGridViewTextBoxColumn
             // 
@@ -281,7 +292,8 @@
             this.resolutionDataGridViewTextBoxColumn.Name = "resolutionDataGridViewTextBoxColumn";
             this.resolutionDataGridViewTextBoxColumn.ReadOnly = true;
             this.resolutionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.resolutionDataGridViewTextBoxColumn.Width = 121;
+            this.resolutionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.resolutionDataGridViewTextBoxColumn.Width = 91;
             // 
             // cPUClassDataGridViewTextBoxColumn
             // 
@@ -291,7 +303,8 @@
             this.cPUClassDataGridViewTextBoxColumn.Name = "cPUClassDataGridViewTextBoxColumn";
             this.cPUClassDataGridViewTextBoxColumn.ReadOnly = true;
             this.cPUClassDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cPUClassDataGridViewTextBoxColumn.Width = 121;
+            this.cPUClassDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cPUClassDataGridViewTextBoxColumn.Width = 91;
             // 
             // cPUbrandDataGridViewTextBoxColumn
             // 
@@ -301,7 +314,8 @@
             this.cPUbrandDataGridViewTextBoxColumn.Name = "cPUbrandDataGridViewTextBoxColumn";
             this.cPUbrandDataGridViewTextBoxColumn.ReadOnly = true;
             this.cPUbrandDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cPUbrandDataGridViewTextBoxColumn.Width = 125;
+            this.cPUbrandDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cPUbrandDataGridViewTextBoxColumn.Width = 95;
             // 
             // cPUtypeDataGridViewTextBoxColumn
             // 
@@ -311,7 +325,8 @@
             this.cPUtypeDataGridViewTextBoxColumn.Name = "cPUtypeDataGridViewTextBoxColumn";
             this.cPUtypeDataGridViewTextBoxColumn.ReadOnly = true;
             this.cPUtypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cPUtypeDataGridViewTextBoxColumn.Width = 116;
+            this.cPUtypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cPUtypeDataGridViewTextBoxColumn.Width = 86;
             // 
             // cPUspeedDataGridViewTextBoxColumn
             // 
@@ -321,7 +336,8 @@
             this.cPUspeedDataGridViewTextBoxColumn.Name = "cPUspeedDataGridViewTextBoxColumn";
             this.cPUspeedDataGridViewTextBoxColumn.ReadOnly = true;
             this.cPUspeedDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cPUspeedDataGridViewTextBoxColumn.Width = 129;
+            this.cPUspeedDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cPUspeedDataGridViewTextBoxColumn.Width = 99;
             // 
             // cPUnumberDataGridViewTextBoxColumn
             // 
@@ -331,7 +347,8 @@
             this.cPUnumberDataGridViewTextBoxColumn.Name = "cPUnumberDataGridViewTextBoxColumn";
             this.cPUnumberDataGridViewTextBoxColumn.ReadOnly = true;
             this.cPUnumberDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cPUnumberDataGridViewTextBoxColumn.Width = 114;
+            this.cPUnumberDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cPUnumberDataGridViewTextBoxColumn.Width = 84;
             // 
             // conditionDataGridViewTextBoxColumn
             // 
@@ -341,7 +358,8 @@
             this.conditionDataGridViewTextBoxColumn.Name = "conditionDataGridViewTextBoxColumn";
             this.conditionDataGridViewTextBoxColumn.ReadOnly = true;
             this.conditionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.conditionDataGridViewTextBoxColumn.Width = 112;
+            this.conditionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.conditionDataGridViewTextBoxColumn.Width = 82;
             // 
             // oSDataGridViewTextBoxColumn
             // 
@@ -361,7 +379,8 @@
             this.platformDataGridViewTextBoxColumn.Name = "platformDataGridViewTextBoxColumn";
             this.platformDataGridViewTextBoxColumn.ReadOnly = true;
             this.platformDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.platformDataGridViewTextBoxColumn.Width = 104;
+            this.platformDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.platformDataGridViewTextBoxColumn.Width = 74;
             // 
             // hDDsizeDataGridViewTextBoxColumn
             // 
@@ -371,7 +390,8 @@
             this.hDDsizeDataGridViewTextBoxColumn.Name = "hDDsizeDataGridViewTextBoxColumn";
             this.hDDsizeDataGridViewTextBoxColumn.ReadOnly = true;
             this.hDDsizeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hDDsizeDataGridViewTextBoxColumn.Width = 107;
+            this.hDDsizeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.hDDsizeDataGridViewTextBoxColumn.Width = 77;
             // 
             // hDDspeedDataGridViewTextBoxColumn
             // 
@@ -381,7 +401,8 @@
             this.hDDspeedDataGridViewTextBoxColumn.Name = "hDDspeedDataGridViewTextBoxColumn";
             this.hDDspeedDataGridViewTextBoxColumn.ReadOnly = true;
             this.hDDspeedDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hDDspeedDataGridViewTextBoxColumn.Width = 122;
+            this.hDDspeedDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.hDDspeedDataGridViewTextBoxColumn.Width = 92;
             // 
             // gPUTypeDataGridViewTextBoxColumn
             // 
@@ -391,7 +412,8 @@
             this.gPUTypeDataGridViewTextBoxColumn.Name = "gPUTypeDataGridViewTextBoxColumn";
             this.gPUTypeDataGridViewTextBoxColumn.ReadOnly = true;
             this.gPUTypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.gPUTypeDataGridViewTextBoxColumn.Width = 109;
+            this.gPUTypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.gPUTypeDataGridViewTextBoxColumn.Width = 79;
             // 
             // opticaldriveDataGridViewTextBoxColumn
             // 
@@ -401,7 +423,8 @@
             this.opticaldriveDataGridViewTextBoxColumn.Name = "opticaldriveDataGridViewTextBoxColumn";
             this.opticaldriveDataGridViewTextBoxColumn.ReadOnly = true;
             this.opticaldriveDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.opticaldriveDataGridViewTextBoxColumn.Width = 124;
+            this.opticaldriveDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.opticaldriveDataGridViewTextBoxColumn.Width = 94;
             // 
             // audiotypeDataGridViewTextBoxColumn
             // 
@@ -411,7 +434,8 @@
             this.audiotypeDataGridViewTextBoxColumn.Name = "audiotypeDataGridViewTextBoxColumn";
             this.audiotypeDataGridViewTextBoxColumn.ReadOnly = true;
             this.audiotypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.audiotypeDataGridViewTextBoxColumn.Width = 115;
+            this.audiotypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.audiotypeDataGridViewTextBoxColumn.Width = 85;
             // 
             // lANDataGridViewTextBoxColumn
             // 
@@ -421,7 +445,8 @@
             this.lANDataGridViewTextBoxColumn.Name = "lANDataGridViewTextBoxColumn";
             this.lANDataGridViewTextBoxColumn.ReadOnly = true;
             this.lANDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.lANDataGridViewTextBoxColumn.Width = 76;
+            this.lANDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.lANDataGridViewTextBoxColumn.Width = 46;
             // 
             // wIFIDataGridViewTextBoxColumn
             // 
@@ -431,7 +456,8 @@
             this.wIFIDataGridViewTextBoxColumn.Name = "wIFIDataGridViewTextBoxColumn";
             this.wIFIDataGridViewTextBoxColumn.ReadOnly = true;
             this.wIFIDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.wIFIDataGridViewTextBoxColumn.Width = 80;
+            this.wIFIDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.wIFIDataGridViewTextBoxColumn.Width = 50;
             // 
             // widthDataGridViewTextBoxColumn
             // 
@@ -441,7 +467,8 @@
             this.widthDataGridViewTextBoxColumn.Name = "widthDataGridViewTextBoxColumn";
             this.widthDataGridViewTextBoxColumn.ReadOnly = true;
             this.widthDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.widthDataGridViewTextBoxColumn.Width = 86;
+            this.widthDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.widthDataGridViewTextBoxColumn.Width = 56;
             // 
             // heightDataGridViewTextBoxColumn
             // 
@@ -451,7 +478,8 @@
             this.heightDataGridViewTextBoxColumn.Name = "heightDataGridViewTextBoxColumn";
             this.heightDataGridViewTextBoxColumn.ReadOnly = true;
             this.heightDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.heightDataGridViewTextBoxColumn.Width = 92;
+            this.heightDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.heightDataGridViewTextBoxColumn.Width = 62;
             // 
             // depthDataGridViewTextBoxColumn
             // 
@@ -461,7 +489,8 @@
             this.depthDataGridViewTextBoxColumn.Name = "depthDataGridViewTextBoxColumn";
             this.depthDataGridViewTextBoxColumn.ReadOnly = true;
             this.depthDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.depthDataGridViewTextBoxColumn.Width = 89;
+            this.depthDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.depthDataGridViewTextBoxColumn.Width = 59;
             // 
             // weightDataGridViewTextBoxColumn
             // 
@@ -471,7 +500,8 @@
             this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
             this.weightDataGridViewTextBoxColumn.ReadOnly = true;
             this.weightDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.weightDataGridViewTextBoxColumn.Width = 95;
+            this.weightDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.weightDataGridViewTextBoxColumn.Width = 65;
             // 
             // mousttypeDataGridViewTextBoxColumn
             // 
@@ -481,7 +511,8 @@
             this.mousttypeDataGridViewTextBoxColumn.Name = "mousttypeDataGridViewTextBoxColumn";
             this.mousttypeDataGridViewTextBoxColumn.ReadOnly = true;
             this.mousttypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.mousttypeDataGridViewTextBoxColumn.Width = 117;
+            this.mousttypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.mousttypeDataGridViewTextBoxColumn.Width = 87;
             // 
             // powerDataGridViewTextBoxColumn
             // 
@@ -491,7 +522,8 @@
             this.powerDataGridViewTextBoxColumn.Name = "powerDataGridViewTextBoxColumn";
             this.powerDataGridViewTextBoxColumn.ReadOnly = true;
             this.powerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.powerDataGridViewTextBoxColumn.Width = 89;
+            this.powerDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.powerDataGridViewTextBoxColumn.Width = 59;
             // 
             // webcamDataGridViewTextBoxColumn
             // 
@@ -501,11 +533,8 @@
             this.webcamDataGridViewTextBoxColumn.Name = "webcamDataGridViewTextBoxColumn";
             this.webcamDataGridViewTextBoxColumn.ReadOnly = true;
             this.webcamDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.webcamDataGridViewTextBoxColumn.Width = 108;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(Assignment5.Models.Product);
+            this.webcamDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.webcamDataGridViewTextBoxColumn.Width = 78;
             // 
             // SelectForm
             // 
