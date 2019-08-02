@@ -25,6 +25,11 @@ namespace Assignment5.Views
 
         }
 
+        public bool HasLoadedDataSource()
+        {
+            return false;
+        }
+
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -36,10 +41,6 @@ namespace Assignment5.Views
             Program.Forms[FormNames.PRODUCTINFO_FORM].Show();
         }
 
-        private void SelectionLabel_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void SelectForm_Load(object sender, EventArgs e)
         {
@@ -64,16 +65,14 @@ namespace Assignment5.Views
                 // local scope aliase
                 var rowIndex = MyProductDataGridView.CurrentCell.RowIndex;
                 var rows = MyProductDataGridView.Rows;
-                var columnCount = MyProductDataGridView.ColumnCount;
+                //var columnCount = MyProductDataGridView.ColumnCount;
                 var cells = rows[rowIndex].Cells;
 
                 rows[rowIndex].Selected = true;
 
-                string outputString = $"{cells[2].Value.ToString()} - {cells[3].Value.ToString()} \t ${Convert.ToDouble(cells[1].Value.ToString()):f2}";
-                HardwareText.Text = outputString;
-
                 SaveProductToMemory(cells);
 
+                HardwareText.Text = $"{Program.product.manufacturer} - {Program.product.model} \t Price: {Convert.ToDouble(Program.product.cost.ToString()):C2}";
             }
         }
 
@@ -110,6 +109,7 @@ namespace Assignment5.Views
             Program.product.manufacturer = cells[(int)Computer.MANUFACTURER].Value.ToString();
             Program.product.CPU_number = cells[(int)Computer.CPU_NUMBER].Value.ToString();
         }
+
         /// <summary>
         /// This Timer lets the data to be loaded first before change selection to avoid problem.
         /// </summary>

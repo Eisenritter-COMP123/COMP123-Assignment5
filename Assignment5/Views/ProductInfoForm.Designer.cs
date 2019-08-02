@@ -69,7 +69,6 @@
             this.CPUNumber = new System.Windows.Forms.Label();
             this.CPUClockLabel = new System.Windows.Forms.Label();
             this.HDDLabel = new System.Windows.Forms.Label();
-            this.PIDLabel = new System.Windows.Forms.Label();
             this.PIDTextBox = new System.Windows.Forms.TextBox();
             this.ProductInfoSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.ProductInfoOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -82,6 +81,7 @@
             this.ConditionLabel = new System.Windows.Forms.Label();
             this.CostTextbox = new System.Windows.Forms.TextBox();
             this.GeneralInfoTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.PIDLabel = new System.Windows.Forms.Label();
             this.ProductInfoFormMenuStrip.SuspendLayout();
             this.ProductInfoGroupBox.SuspendLayout();
             this.ProductInfoTableLayoutPanel.SuspendLayout();
@@ -93,15 +93,13 @@
             // ProductInfoFormMenuStrip
             // 
             this.ProductInfoFormMenuStrip.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ProductInfoFormMenuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.ProductInfoFormMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ProductInfoFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem});
             this.ProductInfoFormMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.ProductInfoFormMenuStrip.Name = "ProductInfoFormMenuStrip";
-            this.ProductInfoFormMenuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.ProductInfoFormMenuStrip.Size = new System.Drawing.Size(2026, 33);
+            this.ProductInfoFormMenuStrip.Size = new System.Drawing.Size(1006, 28);
             this.ProductInfoFormMenuStrip.TabIndex = 0;
             this.ProductInfoFormMenuStrip.Text = "menuStrip1";
             // 
@@ -115,7 +113,7 @@
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // openToolStripMenuItem
@@ -124,14 +122,14 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(178, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -139,24 +137,24 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(178, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -165,13 +163,13 @@
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.selectAnotherProductToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 29);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.editToolStripMenuItem.Text = "&Edit";
             // 
             // selectAnotherProductToolStripMenuItem
             // 
             this.selectAnotherProductToolStripMenuItem.Name = "selectAnotherProductToolStripMenuItem";
-            this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(296, 34);
+            this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.selectAnotherProductToolStripMenuItem.Text = "&Select Another Product";
             this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this.SelectAnotherButton_Click);
             // 
@@ -179,13 +177,11 @@
             // 
             this.ProductInfoGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.ProductInfoGroupBox.Controls.Add(this.ProductInfoTableLayoutPanel);
-            this.ProductInfoGroupBox.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
+            this.ProductInfoGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.ProductInfoGroupBox.ForeColor = System.Drawing.Color.White;
-            this.ProductInfoGroupBox.Location = new System.Drawing.Point(12, 238);
-            this.ProductInfoGroupBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ProductInfoGroupBox.Location = new System.Drawing.Point(12, 180);
             this.ProductInfoGroupBox.Name = "ProductInfoGroupBox";
-            this.ProductInfoGroupBox.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ProductInfoGroupBox.Size = new System.Drawing.Size(2000, 171);
+            this.ProductInfoGroupBox.Size = new System.Drawing.Size(983, 132);
             this.ProductInfoGroupBox.TabIndex = 2;
             this.ProductInfoGroupBox.TabStop = false;
             this.ProductInfoGroupBox.Text = "Product Info";
@@ -206,34 +202,34 @@
             this.ProductInfoTableLayoutPanel.Controls.Add(this.PlatformTextBox, 1, 0);
             this.ProductInfoTableLayoutPanel.Controls.Add(this.ManufacturerTextBox, 1, 1);
             this.ProductInfoTableLayoutPanel.Controls.Add(this.OSLabel, 2, 0);
-            this.ProductInfoTableLayoutPanel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.ProductInfoTableLayoutPanel.Location = new System.Drawing.Point(12, 36);
+            this.ProductInfoTableLayoutPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.ProductInfoTableLayoutPanel.Location = new System.Drawing.Point(11, 29);
+            this.ProductInfoTableLayoutPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ProductInfoTableLayoutPanel.Name = "ProductInfoTableLayoutPanel";
             this.ProductInfoTableLayoutPanel.RowCount = 2;
             this.ProductInfoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.ProductInfoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ProductInfoTableLayoutPanel.Size = new System.Drawing.Size(1982, 100);
+            this.ProductInfoTableLayoutPanel.Size = new System.Drawing.Size(966, 80);
             this.ProductInfoTableLayoutPanel.TabIndex = 6;
             // 
             // ModelTextBox
             // 
             this.ModelTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ModelTextBox.Enabled = false;
-            this.ModelTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.ModelTextBox.Location = new System.Drawing.Point(1275, 57);
-            this.ModelTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ModelTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.ModelTextBox.Location = new System.Drawing.Point(621, 45);
             this.ModelTextBox.Name = "ModelTextBox";
-            this.ModelTextBox.Size = new System.Drawing.Size(704, 36);
+            this.ModelTextBox.Size = new System.Drawing.Size(342, 30);
             this.ModelTextBox.TabIndex = 5;
             // 
             // ModelLabel
             // 
             this.ModelLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ModelLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.ModelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.ModelLabel.ForeColor = System.Drawing.Color.White;
-            this.ModelLabel.Location = new System.Drawing.Point(851, 50);
+            this.ModelLabel.Location = new System.Drawing.Point(415, 40);
             this.ModelLabel.Name = "ModelLabel";
-            this.ModelLabel.Size = new System.Drawing.Size(418, 50);
+            this.ModelLabel.Size = new System.Drawing.Size(200, 40);
             this.ModelLabel.TabIndex = 4;
             this.ModelLabel.Text = "Model";
             this.ModelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -242,21 +238,20 @@
             // 
             this.OSTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.OSTextBox.Enabled = false;
-            this.OSTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.OSTextBox.Location = new System.Drawing.Point(1275, 7);
-            this.OSTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OSTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.OSTextBox.Location = new System.Drawing.Point(621, 5);
             this.OSTextBox.Name = "OSTextBox";
-            this.OSTextBox.Size = new System.Drawing.Size(704, 36);
+            this.OSTextBox.Size = new System.Drawing.Size(342, 30);
             this.OSTextBox.TabIndex = 5;
             // 
             // PlatformLabel
             // 
             this.PlatformLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PlatformLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.PlatformLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.PlatformLabel.ForeColor = System.Drawing.Color.White;
             this.PlatformLabel.Location = new System.Drawing.Point(3, 0);
             this.PlatformLabel.Name = "PlatformLabel";
-            this.PlatformLabel.Size = new System.Drawing.Size(418, 50);
+            this.PlatformLabel.Size = new System.Drawing.Size(200, 40);
             this.PlatformLabel.TabIndex = 4;
             this.PlatformLabel.Text = "Platform";
             this.PlatformLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -264,11 +259,11 @@
             // ManufacturerLabel
             // 
             this.ManufacturerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ManufacturerLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.ManufacturerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.ManufacturerLabel.ForeColor = System.Drawing.Color.White;
-            this.ManufacturerLabel.Location = new System.Drawing.Point(3, 50);
+            this.ManufacturerLabel.Location = new System.Drawing.Point(3, 40);
             this.ManufacturerLabel.Name = "ManufacturerLabel";
-            this.ManufacturerLabel.Size = new System.Drawing.Size(418, 50);
+            this.ManufacturerLabel.Size = new System.Drawing.Size(200, 40);
             this.ManufacturerLabel.TabIndex = 4;
             this.ManufacturerLabel.Text = "Manufacturer";
             this.ManufacturerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -277,32 +272,30 @@
             // 
             this.PlatformTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PlatformTextBox.Enabled = false;
-            this.PlatformTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.PlatformTextBox.Location = new System.Drawing.Point(427, 7);
-            this.PlatformTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PlatformTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.PlatformTextBox.Location = new System.Drawing.Point(209, 5);
             this.PlatformTextBox.Name = "PlatformTextBox";
-            this.PlatformTextBox.Size = new System.Drawing.Size(418, 36);
+            this.PlatformTextBox.Size = new System.Drawing.Size(200, 30);
             this.PlatformTextBox.TabIndex = 5;
             // 
             // ManufacturerTextBox
             // 
             this.ManufacturerTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ManufacturerTextBox.Enabled = false;
-            this.ManufacturerTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.ManufacturerTextBox.Location = new System.Drawing.Point(427, 57);
-            this.ManufacturerTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ManufacturerTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.ManufacturerTextBox.Location = new System.Drawing.Point(209, 45);
             this.ManufacturerTextBox.Name = "ManufacturerTextBox";
-            this.ManufacturerTextBox.Size = new System.Drawing.Size(418, 36);
+            this.ManufacturerTextBox.Size = new System.Drawing.Size(200, 30);
             this.ManufacturerTextBox.TabIndex = 5;
             // 
             // OSLabel
             // 
             this.OSLabel.BackColor = System.Drawing.Color.Transparent;
-            this.OSLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.OSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.OSLabel.ForeColor = System.Drawing.Color.White;
-            this.OSLabel.Location = new System.Drawing.Point(851, 0);
+            this.OSLabel.Location = new System.Drawing.Point(415, 0);
             this.OSLabel.Name = "OSLabel";
-            this.OSLabel.Size = new System.Drawing.Size(418, 50);
+            this.OSLabel.Size = new System.Drawing.Size(200, 40);
             this.OSLabel.TabIndex = 4;
             this.OSLabel.Text = "OS";
             this.OSLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -311,13 +304,11 @@
             // 
             this.TechSpecGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.TechSpecGroupBox.Controls.Add(this.TechSpecsTableLayoutMenu);
-            this.TechSpecGroupBox.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
+            this.TechSpecGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.TechSpecGroupBox.ForeColor = System.Drawing.Color.White;
-            this.TechSpecGroupBox.Location = new System.Drawing.Point(12, 434);
-            this.TechSpecGroupBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TechSpecGroupBox.Location = new System.Drawing.Point(11, 318);
             this.TechSpecGroupBox.Name = "TechSpecGroupBox";
-            this.TechSpecGroupBox.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TechSpecGroupBox.Size = new System.Drawing.Size(2000, 392);
+            this.TechSpecGroupBox.Size = new System.Drawing.Size(983, 273);
             this.TechSpecGroupBox.TabIndex = 3;
             this.TechSpecGroupBox.TabStop = false;
             this.TechSpecGroupBox.Text = "Tech Specs";
@@ -350,89 +341,84 @@
             this.TechSpecsTableLayoutMenu.Controls.Add(this.CPUNumber, 2, 1);
             this.TechSpecsTableLayoutMenu.Controls.Add(this.CPUClockLabel, 2, 2);
             this.TechSpecsTableLayoutMenu.Controls.Add(this.HDDLabel, 4, 0);
-            this.TechSpecsTableLayoutMenu.Location = new System.Drawing.Point(12, 36);
+            this.TechSpecsTableLayoutMenu.Location = new System.Drawing.Point(11, 29);
+            this.TechSpecsTableLayoutMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TechSpecsTableLayoutMenu.Name = "TechSpecsTableLayoutMenu";
             this.TechSpecsTableLayoutMenu.RowCount = 3;
             this.TechSpecsTableLayoutMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.TechSpecsTableLayoutMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.TechSpecsTableLayoutMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TechSpecsTableLayoutMenu.Size = new System.Drawing.Size(1979, 334);
+            this.TechSpecsTableLayoutMenu.Size = new System.Drawing.Size(963, 214);
             this.TechSpecsTableLayoutMenu.TabIndex = 10;
             // 
             // WebCamTextBox
             // 
             this.WebCamTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.WebCamTextBox.Enabled = false;
-            this.WebCamTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.WebCamTextBox.Location = new System.Drawing.Point(1323, 260);
-            this.WebCamTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.WebCamTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.WebCamTextBox.Location = new System.Drawing.Point(644, 163);
             this.WebCamTextBox.Name = "WebCamTextBox";
-            this.WebCamTextBox.Size = new System.Drawing.Size(653, 36);
+            this.WebCamTextBox.Size = new System.Drawing.Size(315, 30);
             this.WebCamTextBox.TabIndex = 5;
             // 
             // GPUTypeTextBox
             // 
             this.GPUTypeTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GPUTypeTextBox.Enabled = false;
-            this.GPUTypeTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.GPUTypeTextBox.Location = new System.Drawing.Point(1323, 148);
-            this.GPUTypeTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.GPUTypeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.GPUTypeTextBox.Location = new System.Drawing.Point(644, 91);
             this.GPUTypeTextBox.Name = "GPUTypeTextBox";
-            this.GPUTypeTextBox.Size = new System.Drawing.Size(653, 36);
+            this.GPUTypeTextBox.Size = new System.Drawing.Size(315, 30);
             this.GPUTypeTextBox.TabIndex = 5;
             // 
             // HDDTextBox
             // 
             this.HDDTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HDDTextBox.Enabled = false;
-            this.HDDTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.HDDTextBox.Location = new System.Drawing.Point(1323, 37);
-            this.HDDTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HDDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.HDDTextBox.Location = new System.Drawing.Point(644, 20);
             this.HDDTextBox.Name = "HDDTextBox";
-            this.HDDTextBox.Size = new System.Drawing.Size(653, 36);
+            this.HDDTextBox.Size = new System.Drawing.Size(315, 30);
             this.HDDTextBox.TabIndex = 5;
             // 
             // LCDSizeTextBox
             // 
             this.LCDSizeTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LCDSizeTextBox.Enabled = false;
-            this.LCDSizeTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.LCDSizeTextBox.Location = new System.Drawing.Point(795, 37);
-            this.LCDSizeTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LCDSizeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.LCDSizeTextBox.Location = new System.Drawing.Point(387, 20);
             this.LCDSizeTextBox.Name = "LCDSizeTextBox";
-            this.LCDSizeTextBox.Size = new System.Drawing.Size(258, 36);
+            this.LCDSizeTextBox.Size = new System.Drawing.Size(122, 30);
             this.LCDSizeTextBox.TabIndex = 5;
             // 
             // CPUNumberTextBox
             // 
             this.CPUNumberTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CPUNumberTextBox.Enabled = false;
-            this.CPUNumberTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.CPUNumberTextBox.Location = new System.Drawing.Point(795, 148);
-            this.CPUNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CPUNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.CPUNumberTextBox.Location = new System.Drawing.Point(387, 91);
             this.CPUNumberTextBox.Name = "CPUNumberTextBox";
-            this.CPUNumberTextBox.Size = new System.Drawing.Size(258, 36);
+            this.CPUNumberTextBox.Size = new System.Drawing.Size(122, 30);
             this.CPUNumberTextBox.TabIndex = 5;
             // 
             // CPUClockTextBox
             // 
             this.CPUClockTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CPUClockTextBox.Enabled = false;
-            this.CPUClockTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.CPUClockTextBox.Location = new System.Drawing.Point(795, 260);
-            this.CPUClockTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CPUClockTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.CPUClockTextBox.Location = new System.Drawing.Point(387, 163);
             this.CPUClockTextBox.Name = "CPUClockTextBox";
-            this.CPUClockTextBox.Size = new System.Drawing.Size(258, 36);
+            this.CPUClockTextBox.Size = new System.Drawing.Size(122, 30);
             this.CPUClockTextBox.TabIndex = 5;
             // 
             // MemoryLabel
             // 
             this.MemoryLabel.BackColor = System.Drawing.Color.Transparent;
-            this.MemoryLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.MemoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.MemoryLabel.ForeColor = System.Drawing.Color.White;
             this.MemoryLabel.Location = new System.Drawing.Point(3, 0);
             this.MemoryLabel.Name = "MemoryLabel";
-            this.MemoryLabel.Size = new System.Drawing.Size(258, 111);
+            this.MemoryLabel.Size = new System.Drawing.Size(122, 71);
             this.MemoryLabel.TabIndex = 4;
             this.MemoryLabel.Text = "Memory";
             this.MemoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -441,21 +427,20 @@
             // 
             this.MemoryTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MemoryTextBox.Enabled = false;
-            this.MemoryTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.MemoryTextBox.Location = new System.Drawing.Point(267, 37);
-            this.MemoryTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MemoryTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.MemoryTextBox.Location = new System.Drawing.Point(131, 20);
             this.MemoryTextBox.Name = "MemoryTextBox";
-            this.MemoryTextBox.Size = new System.Drawing.Size(258, 36);
+            this.MemoryTextBox.Size = new System.Drawing.Size(122, 30);
             this.MemoryTextBox.TabIndex = 5;
             // 
             // GPUTypeLabel
             // 
             this.GPUTypeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.GPUTypeLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.GPUTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.GPUTypeLabel.ForeColor = System.Drawing.Color.White;
-            this.GPUTypeLabel.Location = new System.Drawing.Point(1059, 111);
+            this.GPUTypeLabel.Location = new System.Drawing.Point(515, 71);
             this.GPUTypeLabel.Name = "GPUTypeLabel";
-            this.GPUTypeLabel.Size = new System.Drawing.Size(258, 111);
+            this.GPUTypeLabel.Size = new System.Drawing.Size(122, 71);
             this.GPUTypeLabel.TabIndex = 4;
             this.GPUTypeLabel.Text = "GPU Type";
             this.GPUTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -463,11 +448,11 @@
             // LCDSizeLabel
             // 
             this.LCDSizeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.LCDSizeLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.LCDSizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.LCDSizeLabel.ForeColor = System.Drawing.Color.White;
-            this.LCDSizeLabel.Location = new System.Drawing.Point(531, 0);
+            this.LCDSizeLabel.Location = new System.Drawing.Point(259, 0);
             this.LCDSizeLabel.Name = "LCDSizeLabel";
-            this.LCDSizeLabel.Size = new System.Drawing.Size(258, 111);
+            this.LCDSizeLabel.Size = new System.Drawing.Size(122, 71);
             this.LCDSizeLabel.TabIndex = 4;
             this.LCDSizeLabel.Text = "LCD Size";
             this.LCDSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -476,21 +461,20 @@
             // 
             this.CPUTypeTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CPUTypeTextBox.Enabled = false;
-            this.CPUTypeTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.CPUTypeTextBox.Location = new System.Drawing.Point(267, 260);
-            this.CPUTypeTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CPUTypeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.CPUTypeTextBox.Location = new System.Drawing.Point(131, 163);
             this.CPUTypeTextBox.Name = "CPUTypeTextBox";
-            this.CPUTypeTextBox.Size = new System.Drawing.Size(258, 36);
+            this.CPUTypeTextBox.Size = new System.Drawing.Size(122, 30);
             this.CPUTypeTextBox.TabIndex = 5;
             // 
             // CPUBrandLabel
             // 
             this.CPUBrandLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CPUBrandLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.CPUBrandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.CPUBrandLabel.ForeColor = System.Drawing.Color.White;
-            this.CPUBrandLabel.Location = new System.Drawing.Point(3, 111);
+            this.CPUBrandLabel.Location = new System.Drawing.Point(3, 71);
             this.CPUBrandLabel.Name = "CPUBrandLabel";
-            this.CPUBrandLabel.Size = new System.Drawing.Size(258, 111);
+            this.CPUBrandLabel.Size = new System.Drawing.Size(122, 71);
             this.CPUBrandLabel.TabIndex = 4;
             this.CPUBrandLabel.Text = "CPU Brand";
             this.CPUBrandLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -498,11 +482,11 @@
             // WebCamLabel
             // 
             this.WebCamLabel.BackColor = System.Drawing.Color.Transparent;
-            this.WebCamLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.WebCamLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.WebCamLabel.ForeColor = System.Drawing.Color.White;
-            this.WebCamLabel.Location = new System.Drawing.Point(1059, 222);
+            this.WebCamLabel.Location = new System.Drawing.Point(515, 142);
             this.WebCamLabel.Name = "WebCamLabel";
-            this.WebCamLabel.Size = new System.Drawing.Size(258, 112);
+            this.WebCamLabel.Size = new System.Drawing.Size(122, 72);
             this.WebCamLabel.TabIndex = 4;
             this.WebCamLabel.Text = "WebCam";
             this.WebCamLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -511,21 +495,20 @@
             // 
             this.CPUBrandTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CPUBrandTextBox.Enabled = false;
-            this.CPUBrandTextBox.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.CPUBrandTextBox.Location = new System.Drawing.Point(267, 148);
-            this.CPUBrandTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CPUBrandTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.CPUBrandTextBox.Location = new System.Drawing.Point(131, 91);
             this.CPUBrandTextBox.Name = "CPUBrandTextBox";
-            this.CPUBrandTextBox.Size = new System.Drawing.Size(258, 36);
+            this.CPUBrandTextBox.Size = new System.Drawing.Size(122, 30);
             this.CPUBrandTextBox.TabIndex = 5;
             // 
             // CPUTypeLabel
             // 
             this.CPUTypeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CPUTypeLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.CPUTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.CPUTypeLabel.ForeColor = System.Drawing.Color.White;
-            this.CPUTypeLabel.Location = new System.Drawing.Point(3, 222);
+            this.CPUTypeLabel.Location = new System.Drawing.Point(3, 142);
             this.CPUTypeLabel.Name = "CPUTypeLabel";
-            this.CPUTypeLabel.Size = new System.Drawing.Size(258, 112);
+            this.CPUTypeLabel.Size = new System.Drawing.Size(122, 72);
             this.CPUTypeLabel.TabIndex = 4;
             this.CPUTypeLabel.Text = "CPU Type";
             this.CPUTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -533,11 +516,11 @@
             // CPUNumber
             // 
             this.CPUNumber.BackColor = System.Drawing.Color.Transparent;
-            this.CPUNumber.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.CPUNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.CPUNumber.ForeColor = System.Drawing.Color.White;
-            this.CPUNumber.Location = new System.Drawing.Point(531, 111);
+            this.CPUNumber.Location = new System.Drawing.Point(259, 71);
             this.CPUNumber.Name = "CPUNumber";
-            this.CPUNumber.Size = new System.Drawing.Size(258, 111);
+            this.CPUNumber.Size = new System.Drawing.Size(122, 71);
             this.CPUNumber.TabIndex = 4;
             this.CPUNumber.Text = "CPU Number";
             this.CPUNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -545,11 +528,11 @@
             // CPUClockLabel
             // 
             this.CPUClockLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CPUClockLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.CPUClockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.CPUClockLabel.ForeColor = System.Drawing.Color.White;
-            this.CPUClockLabel.Location = new System.Drawing.Point(531, 222);
+            this.CPUClockLabel.Location = new System.Drawing.Point(259, 142);
             this.CPUClockLabel.Name = "CPUClockLabel";
-            this.CPUClockLabel.Size = new System.Drawing.Size(258, 112);
+            this.CPUClockLabel.Size = new System.Drawing.Size(122, 72);
             this.CPUClockLabel.TabIndex = 4;
             this.CPUClockLabel.Text = "CPU Clock";
             this.CPUClockLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -557,36 +540,23 @@
             // HDDLabel
             // 
             this.HDDLabel.BackColor = System.Drawing.Color.Transparent;
-            this.HDDLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.HDDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.HDDLabel.ForeColor = System.Drawing.Color.White;
-            this.HDDLabel.Location = new System.Drawing.Point(1059, 0);
+            this.HDDLabel.Location = new System.Drawing.Point(515, 0);
             this.HDDLabel.Name = "HDDLabel";
-            this.HDDLabel.Size = new System.Drawing.Size(258, 111);
+            this.HDDLabel.Size = new System.Drawing.Size(122, 71);
             this.HDDLabel.TabIndex = 4;
             this.HDDLabel.Text = "HDD";
             this.HDDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // PIDLabel
-            // 
-            this.PIDLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PIDLabel.Font = new System.Drawing.Font("Unispace", 18F, System.Drawing.FontStyle.Bold);
-            this.PIDLabel.ForeColor = System.Drawing.Color.White;
-            this.PIDLabel.Location = new System.Drawing.Point(3, 0);
-            this.PIDLabel.Name = "PIDLabel";
-            this.PIDLabel.Size = new System.Drawing.Size(327, 83);
-            this.PIDLabel.TabIndex = 4;
-            this.PIDLabel.Text = "Product ID:";
-            this.PIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // PIDTextBox
             // 
             this.PIDTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PIDTextBox.Enabled = false;
-            this.PIDTextBox.Font = new System.Drawing.Font("Unispace", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PIDTextBox.Location = new System.Drawing.Point(336, 16);
-            this.PIDTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PIDTextBox.Location = new System.Drawing.Point(166, 12);
             this.PIDTextBox.Name = "PIDTextBox";
-            this.PIDTextBox.Size = new System.Drawing.Size(327, 51);
+            this.PIDTextBox.Size = new System.Drawing.Size(157, 41);
             this.PIDTextBox.TabIndex = 5;
             // 
             // ProductInfoOpenFileDialog
@@ -597,21 +567,20 @@
             // 
             this.ConditionTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ConditionTextBox.Enabled = false;
-            this.ConditionTextBox.Font = new System.Drawing.Font("Unispace", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConditionTextBox.Location = new System.Drawing.Point(1002, 16);
-            this.ConditionTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ConditionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConditionTextBox.Location = new System.Drawing.Point(492, 12);
             this.ConditionTextBox.Name = "ConditionTextBox";
-            this.ConditionTextBox.Size = new System.Drawing.Size(327, 51);
+            this.ConditionTextBox.Size = new System.Drawing.Size(157, 41);
             this.ConditionTextBox.TabIndex = 5;
             // 
             // CostLabel
             // 
             this.CostLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CostLabel.Font = new System.Drawing.Font("Unispace", 18F, System.Drawing.FontStyle.Bold);
+            this.CostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.CostLabel.ForeColor = System.Drawing.Color.White;
-            this.CostLabel.Location = new System.Drawing.Point(1335, 0);
+            this.CostLabel.Location = new System.Drawing.Point(655, 0);
             this.CostLabel.Name = "CostLabel";
-            this.CostLabel.Size = new System.Drawing.Size(327, 83);
+            this.CostLabel.Size = new System.Drawing.Size(157, 66);
             this.CostLabel.TabIndex = 4;
             this.CostLabel.Text = "Cost:";
             this.CostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -619,11 +588,11 @@
             // ConfirmLabel
             // 
             this.ConfirmLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ConfirmLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmLabel.ForeColor = System.Drawing.Color.White;
-            this.ConfirmLabel.Location = new System.Drawing.Point(733, 853);
+            this.ConfirmLabel.Location = new System.Drawing.Point(340, 610);
             this.ConfirmLabel.Name = "ConfirmLabel";
-            this.ConfirmLabel.Size = new System.Drawing.Size(560, 29);
+            this.ConfirmLabel.Size = new System.Drawing.Size(362, 23);
             this.ConfirmLabel.TabIndex = 6;
             this.ConfirmLabel.Text = "Click Next to Confirm Your Selection";
             this.ConfirmLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -631,12 +600,11 @@
             // NextButton
             // 
             this.NextButton.BackColor = System.Drawing.Color.SteelBlue;
-            this.NextButton.Font = new System.Drawing.Font("Unispace", 16F, System.Drawing.FontStyle.Bold);
+            this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.NextButton.ForeColor = System.Drawing.Color.White;
-            this.NextButton.Location = new System.Drawing.Point(1889, 892);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NextButton.Location = new System.Drawing.Point(863, 645);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(111, 48);
+            this.NextButton.Size = new System.Drawing.Size(131, 38);
             this.NextButton.TabIndex = 8;
             this.NextButton.Text = "NEXT";
             this.NextButton.UseVisualStyleBackColor = false;
@@ -645,12 +613,11 @@
             // CancelButton
             // 
             this.CancelButton.BackColor = System.Drawing.Color.Red;
-            this.CancelButton.Font = new System.Drawing.Font("Unispace", 16F, System.Drawing.FontStyle.Bold);
+            this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.CancelButton.ForeColor = System.Drawing.Color.White;
-            this.CancelButton.Location = new System.Drawing.Point(1731, 892);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelButton.Location = new System.Drawing.Point(681, 645);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(152, 48);
+            this.CancelButton.Size = new System.Drawing.Size(176, 38);
             this.CancelButton.TabIndex = 7;
             this.CancelButton.Text = "CANCEL";
             this.CancelButton.UseVisualStyleBackColor = false;
@@ -659,12 +626,11 @@
             // SelectAnotherButton
             // 
             this.SelectAnotherButton.BackColor = System.Drawing.Color.RoyalBlue;
-            this.SelectAnotherButton.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
+            this.SelectAnotherButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.SelectAnotherButton.ForeColor = System.Drawing.Color.White;
-            this.SelectAnotherButton.Location = new System.Drawing.Point(1287, 892);
-            this.SelectAnotherButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SelectAnotherButton.Location = new System.Drawing.Point(286, 645);
             this.SelectAnotherButton.Name = "SelectAnotherButton";
-            this.SelectAnotherButton.Size = new System.Drawing.Size(438, 48);
+            this.SelectAnotherButton.Size = new System.Drawing.Size(389, 38);
             this.SelectAnotherButton.TabIndex = 9;
             this.SelectAnotherButton.Text = "Select Another Product";
             this.SelectAnotherButton.UseVisualStyleBackColor = false;
@@ -672,12 +638,13 @@
             // 
             // ConditionLabel
             // 
+            this.ConditionLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ConditionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ConditionLabel.Font = new System.Drawing.Font("Unispace", 18F, System.Drawing.FontStyle.Bold);
+            this.ConditionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConditionLabel.ForeColor = System.Drawing.Color.White;
-            this.ConditionLabel.Location = new System.Drawing.Point(669, 0);
+            this.ConditionLabel.Location = new System.Drawing.Point(329, 0);
             this.ConditionLabel.Name = "ConditionLabel";
-            this.ConditionLabel.Size = new System.Drawing.Size(327, 83);
+            this.ConditionLabel.Size = new System.Drawing.Size(157, 66);
             this.ConditionLabel.TabIndex = 4;
             this.ConditionLabel.Text = "Condition:";
             this.ConditionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -686,11 +653,10 @@
             // 
             this.CostTextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CostTextbox.Enabled = false;
-            this.CostTextbox.Font = new System.Drawing.Font("Unispace", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CostTextbox.Location = new System.Drawing.Point(1668, 16);
-            this.CostTextbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CostTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostTextbox.Location = new System.Drawing.Point(818, 12);
             this.CostTextbox.Name = "CostTextbox";
-            this.CostTextbox.Size = new System.Drawing.Size(331, 51);
+            this.CostTextbox.Size = new System.Drawing.Size(162, 41);
             this.CostTextbox.TabIndex = 5;
             // 
             // GeneralInfoTableLayoutPanel
@@ -703,26 +669,39 @@
             this.GeneralInfoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.GeneralInfoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.GeneralInfoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.GeneralInfoTableLayoutPanel.Controls.Add(this.PIDLabel, 0, 0);
             this.GeneralInfoTableLayoutPanel.Controls.Add(this.PIDTextBox, 1, 0);
             this.GeneralInfoTableLayoutPanel.Controls.Add(this.ConditionLabel, 2, 0);
-            this.GeneralInfoTableLayoutPanel.Controls.Add(this.PIDLabel, 0, 0);
             this.GeneralInfoTableLayoutPanel.Controls.Add(this.ConditionTextBox, 3, 0);
-            this.GeneralInfoTableLayoutPanel.Controls.Add(this.CostLabel, 4, 0);
             this.GeneralInfoTableLayoutPanel.Controls.Add(this.CostTextbox, 5, 0);
-            this.GeneralInfoTableLayoutPanel.Location = new System.Drawing.Point(12, 111);
+            this.GeneralInfoTableLayoutPanel.Controls.Add(this.CostLabel, 4, 0);
+            this.GeneralInfoTableLayoutPanel.Location = new System.Drawing.Point(12, 69);
+            this.GeneralInfoTableLayoutPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GeneralInfoTableLayoutPanel.Name = "GeneralInfoTableLayoutPanel";
             this.GeneralInfoTableLayoutPanel.RowCount = 1;
             this.GeneralInfoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.GeneralInfoTableLayoutPanel.Size = new System.Drawing.Size(2002, 83);
+            this.GeneralInfoTableLayoutPanel.Size = new System.Drawing.Size(983, 66);
             this.GeneralInfoTableLayoutPanel.TabIndex = 10;
+            // 
+            // PIDLabel
+            // 
+            this.PIDLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PIDLabel.ForeColor = System.Drawing.Color.White;
+            this.PIDLabel.Location = new System.Drawing.Point(3, 0);
+            this.PIDLabel.Name = "PIDLabel";
+            this.PIDLabel.Size = new System.Drawing.Size(157, 66);
+            this.PIDLabel.TabIndex = 6;
+            this.PIDLabel.Text = "Product ID";
+            this.PIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ProductInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Assignment5.Properties.Resources.fin_serv_tech;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2026, 1024);
+            this.ClientSize = new System.Drawing.Size(1006, 721);
             this.ControlBox = false;
             this.Controls.Add(this.GeneralInfoTableLayoutPanel);
             this.Controls.Add(this.SelectAnotherButton);
@@ -732,8 +711,8 @@
             this.Controls.Add(this.TechSpecGroupBox);
             this.Controls.Add(this.ProductInfoGroupBox);
             this.Controls.Add(this.ProductInfoFormMenuStrip);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.ProductInfoFormMenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Info Form";
@@ -767,7 +746,6 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.GroupBox ProductInfoGroupBox;
         private System.Windows.Forms.GroupBox TechSpecGroupBox;
-        private System.Windows.Forms.Label PIDLabel;
         private System.Windows.Forms.TextBox PIDTextBox;
         private System.Windows.Forms.ToolStripMenuItem selectAnotherProductToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog ProductInfoSaveFileDialog;
@@ -809,5 +787,6 @@
         private System.Windows.Forms.Label ConditionLabel;
         private System.Windows.Forms.TextBox CostTextbox;
         private System.Windows.Forms.TableLayoutPanel GeneralInfoTableLayoutPanel;
+        private System.Windows.Forms.Label PIDLabel;
     }
 }
