@@ -49,6 +49,8 @@ namespace Assignment5.Views
                 productBindingSource.DataSource = db.products.Local.ToBindingList();
                 _dataLoaded = false;
                 TableLoadTimer.Enabled = true;
+                HardwareText.Text = $"{Program.product.manufacturer}-{Program.product.model}\t${Program.product.cost:f2}";
+
             }
             //Set initial selection to null
             MyProductDataGridView.CurrentCell.Selected=false;

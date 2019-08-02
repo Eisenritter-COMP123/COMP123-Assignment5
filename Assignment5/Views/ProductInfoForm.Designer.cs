@@ -71,15 +71,14 @@
             this.HDDLabel = new System.Windows.Forms.Label();
             this.PIDLabel = new System.Windows.Forms.Label();
             this.PIDTextBox = new System.Windows.Forms.TextBox();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ProductInfoSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.ProductInfoOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.ConditionTextBox = new System.Windows.Forms.TextBox();
             this.CostLabel = new System.Windows.Forms.Label();
-            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.ConfirmLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SelectAnotherButton = new System.Windows.Forms.Button();
             this.ConditionLabel = new System.Windows.Forms.Label();
             this.CostTextbox = new System.Windows.Forms.TextBox();
             this.GeneralInfoTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -125,13 +124,14 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(223, 34);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(220, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(267, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -139,23 +139,24 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(223, 34);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(220, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(220, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(223, 34);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -587,9 +588,9 @@
             this.PIDTextBox.Size = new System.Drawing.Size(327, 51);
             this.PIDTextBox.TabIndex = 5;
             // 
-            // openFileDialog1
+            // ProductInfoOpenFileDialog
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.ProductInfoOpenFileDialog.FileName = "openFileDialog1";
             // 
             // ConditionTextBox
             // 
@@ -614,14 +615,6 @@
             this.CostLabel.Text = "Cost:";
             this.CostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // entityCommand1
-            // 
-            this.entityCommand1.CommandTimeout = 0;
-            this.entityCommand1.CommandTree = null;
-            this.entityCommand1.Connection = null;
-            this.entityCommand1.EnablePlanCaching = true;
-            this.entityCommand1.Transaction = null;
-            // 
             // ConfirmLabel
             // 
             this.ConfirmLabel.BackColor = System.Drawing.Color.Transparent;
@@ -637,7 +630,6 @@
             // NextButton
             // 
             this.NextButton.BackColor = System.Drawing.Color.SteelBlue;
-            this.NextButton.Enabled = false;
             this.NextButton.Font = new System.Drawing.Font("Unispace", 16F, System.Drawing.FontStyle.Bold);
             this.NextButton.ForeColor = System.Drawing.Color.White;
             this.NextButton.Location = new System.Drawing.Point(1889, 892);
@@ -647,6 +639,7 @@
             this.NextButton.TabIndex = 8;
             this.NextButton.Text = "NEXT";
             this.NextButton.UseVisualStyleBackColor = false;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // CancelButton
             // 
@@ -662,18 +655,19 @@
             this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
-            // button1
+            // SelectAnotherButton
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1310, 892);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(415, 48);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Select Another Product";
-            this.button1.UseVisualStyleBackColor = false;
+            this.SelectAnotherButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.SelectAnotherButton.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
+            this.SelectAnotherButton.ForeColor = System.Drawing.Color.White;
+            this.SelectAnotherButton.Location = new System.Drawing.Point(1287, 892);
+            this.SelectAnotherButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SelectAnotherButton.Name = "SelectAnotherButton";
+            this.SelectAnotherButton.Size = new System.Drawing.Size(438, 48);
+            this.SelectAnotherButton.TabIndex = 9;
+            this.SelectAnotherButton.Text = "Select Another Product";
+            this.SelectAnotherButton.UseVisualStyleBackColor = false;
+            this.SelectAnotherButton.Click += new System.EventHandler(this.SelectAnotherButton_Click);
             // 
             // ConditionLabel
             // 
@@ -728,8 +722,9 @@
             this.BackgroundImage = global::Assignment5.Properties.Resources.fin_serv_tech;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2026, 1024);
+            this.ControlBox = false;
             this.Controls.Add(this.GeneralInfoTableLayoutPanel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SelectAnotherButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.ConfirmLabel);
@@ -741,6 +736,7 @@
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Info Form";
+            this.Activated += new System.EventHandler(this.ProductInfoForm_Load);
             this.Load += new System.EventHandler(this.ProductInfoForm_Load);
             this.ProductInfoFormMenuStrip.ResumeLayout(false);
             this.ProductInfoFormMenuStrip.PerformLayout();
@@ -773,11 +769,10 @@
         private System.Windows.Forms.Label PIDLabel;
         private System.Windows.Forms.TextBox PIDTextBox;
         private System.Windows.Forms.ToolStripMenuItem selectAnotherProductToolStripMenuItem;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog ProductInfoSaveFileDialog;
+        private System.Windows.Forms.OpenFileDialog ProductInfoOpenFileDialog;
         private System.Windows.Forms.TextBox ConditionTextBox;
         private System.Windows.Forms.Label CostLabel;
-        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
         private System.Windows.Forms.Label ModelLabel;
         private System.Windows.Forms.Label OSLabel;
         private System.Windows.Forms.TextBox ModelTextBox;
@@ -807,7 +802,7 @@
         private System.Windows.Forms.Label ConfirmLabel;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button CancelButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SelectAnotherButton;
         private System.Windows.Forms.TableLayoutPanel ProductInfoTableLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel TechSpecsTableLayoutMenu;
         private System.Windows.Forms.Label ConditionLabel;
