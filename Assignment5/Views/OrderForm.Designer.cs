@@ -729,9 +729,13 @@
             // 
             // PCPictureBox
             // 
+            this.PCPictureBox.BackColor = System.Drawing.Color.Black;
+            this.PCPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PCPictureBox.Image = global::Assignment5.Properties.Resources.PCIndex1;
             this.PCPictureBox.Location = new System.Drawing.Point(518, 186);
             this.PCPictureBox.Name = "PCPictureBox";
             this.PCPictureBox.Size = new System.Drawing.Size(476, 270);
+            this.PCPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PCPictureBox.TabIndex = 7;
             this.PCPictureBox.TabStop = false;
             // 

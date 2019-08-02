@@ -23,17 +23,17 @@ namespace DollarComputersunitTestProject
             Assert.IsTrue(selectForm.HasLoadedDataSource());
         }
 
-        [TestMethod]
-        public void TestThatSelectLabelDisplaysItemSelected()
-        {
-            // arrange
-            SelectForm selectForm;
+        //[TestMethod]
+        //public void TestThatSelectLabelDisplaysItemSelected()
+        //{
+        //    // arrange
+        //    SelectForm selectForm;
 
-            //act
-            selectForm.
+        //    //act
+        //    selectForm.
 
-            //assert
-            Assert.AreEqual("Hello World Item", selectForm.SelectLabel.Text);
-        }
+        //    //assert
+        //    Assert.AreEqual("Hello World Item", selectForm.SelectLabel.Text);
+        //}
     }
 }

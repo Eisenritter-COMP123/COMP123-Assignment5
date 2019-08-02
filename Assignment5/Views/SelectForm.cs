@@ -126,22 +126,5 @@ namespace Assignment5.Views
             NextButton.Enabled = true;
         }
 
-        private void SelectForm_Activated(object sender, EventArgs e)
-        {
-
-            var rowIndex= MyProductDataGridView.CurrentCell.RowIndex;
-
-            foreach (DataGridViewRow row in MyProductDataGridView.Rows)
-            {
-                if (row.Cells[1].Value.ToString().Equals(Program.product.productID))
-                {
-                    rowIndex = row.Index;
-                    break;
-                }
-            }
-
-            MyProductDataGridView.Rows[rowIndex].Selected = true;
-        }
-
     }
     }

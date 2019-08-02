@@ -160,6 +160,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\DollarComputersIcon.ico" />
+    <None Include="Resources\PCIndex22.jpg" />
+    <None Include="Resources\PCIndex21.jpg" />
+    <None Include="Resources\PCIndex20.jpg" />
+    <None Include="Resources\PCIndex19.jpg" />
+    <None Include="Resources\PCIndex18.jpg" />
+    <None Include="Resources\PCIndex17.jpg" />
+    <None Include="Resources\PCIndex16.jpg" />
+    <None Include="Resources\PCIndex15.jpg" />
+    <None Include="Resources\PCIndex14.jpg" />
+    <None Include="Resources\PCIndex13.jpg" />
+    <None Include="Resources\PCIndex12.jpg" />
+    <None Include="Resources\PCIndex11.jpg" />
+    <None Include="Resources\PCIndex10.jpg" />
+    <None Include="Resources\PCIndex9.jpg" />
+    <None Include="Resources\PCIndex8.jpg" />
+    <None Include="Resources\PCIndex7.jpg" />
+    <None Include="Resources\PCIndex6.jpg" />
+    <None Include="Resources\PCIndex5.jpg" />
+    <None Include="Resources\PCIndex4.jpg" />
+    <None Include="Resources\PCIndex3.jpg" />
+    <None Include="Resources\PCIndex2.jpg" />
+    <None Include="Resources\PCIndex1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -80,9 +80,12 @@ namespace Assignment5.Views
             WebCamContextLabel.Text = Program.product.webcam;
             OSContextLabel.Text = Program.product.OS;
 
-            PriceContextLabel.Text = $"${Program.product.cost:f2}";
-            TaxContextLabel.Text = $"${Convert.ToDouble(Program.product.cost)*0.13:f2}";
-            TotalContextLabel.Text = $"${Convert.ToDouble(Program.product.cost) * 1.13:f2}";
+            //PCPictureBox.Image = Image.FromFile($"Assignment5.Properties.Resources.PCIndex{Program.product.productID.ToString()}.jpg");
+            PCPictureBox.Image = Assignment5.Properties.Resources.PCIndex1;
+
+            PriceContextLabel.Text = $"{Program.product.cost:c2}";
+            TaxContextLabel.Text = $"{Convert.ToDouble(Program.product.cost)*0.13:c2}";
+            TotalContextLabel.Text = $"{Convert.ToDouble(Program.product.cost) * 1.13:c2}";
         }
 
     }
