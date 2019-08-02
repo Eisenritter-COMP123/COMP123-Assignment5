@@ -76,15 +76,15 @@
             this.TotalLabel = new System.Windows.Forms.Label();
             this.PriceLabel = new System.Windows.Forms.Label();
             this.SalesTaxLabel = new System.Windows.Forms.Label();
-            this.ProductPrintForm = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
-            this.FinishButton = new System.Windows.Forms.Button();
             this.DividerPictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.CancelButton = new System.Windows.Forms.Button();
-            this.BackButton = new System.Windows.Forms.Button();
             this.TotalContextLabel = new System.Windows.Forms.Label();
             this.PriceContextLabel = new System.Windows.Forms.Label();
             this.TaxContextLabel = new System.Windows.Forms.Label();
+            this.ProductPrintForm = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
+            this.FinishButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
             this.OrderFormMenuStrip.SuspendLayout();
             this.SystemComponentsGroupBox.SuspendLayout();
             this.ProductInfoTableLayoutPanel.SuspendLayout();
@@ -662,6 +662,49 @@
             this.SalesTaxLabel.Text = "Sales Tax (13%):";
             this.SalesTaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // DividerPictureBox
+            // 
+            this.DividerPictureBox.BackgroundImage = global::Assignment5.Properties.Resources.DividerLine;
+            this.PriceTableLayoutPanel.SetColumnSpan(this.DividerPictureBox, 3);
+            this.DividerPictureBox.Location = new System.Drawing.Point(3, 177);
+            this.DividerPictureBox.Name = "DividerPictureBox";
+            this.DividerPictureBox.Size = new System.Drawing.Size(978, 81);
+            this.DividerPictureBox.TabIndex = 10;
+            this.DividerPictureBox.TabStop = false;
+            // 
+            // TotalContextLabel
+            // 
+            this.TotalContextLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TotalContextLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.TotalContextLabel.ForeColor = System.Drawing.Color.White;
+            this.TotalContextLabel.Location = new System.Drawing.Point(659, 261);
+            this.TotalContextLabel.Name = "TotalContextLabel";
+            this.TotalContextLabel.Size = new System.Drawing.Size(321, 87);
+            this.TotalContextLabel.TabIndex = 11;
+            this.TotalContextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PriceContextLabel
+            // 
+            this.PriceContextLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PriceContextLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.PriceContextLabel.ForeColor = System.Drawing.Color.White;
+            this.PriceContextLabel.Location = new System.Drawing.Point(659, 0);
+            this.PriceContextLabel.Name = "PriceContextLabel";
+            this.PriceContextLabel.Size = new System.Drawing.Size(321, 87);
+            this.PriceContextLabel.TabIndex = 12;
+            this.PriceContextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TaxContextLabel
+            // 
+            this.TaxContextLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TaxContextLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.TaxContextLabel.ForeColor = System.Drawing.Color.White;
+            this.TaxContextLabel.Location = new System.Drawing.Point(659, 87);
+            this.TaxContextLabel.Name = "TaxContextLabel";
+            this.TaxContextLabel.Size = new System.Drawing.Size(321, 87);
+            this.TaxContextLabel.TabIndex = 13;
+            this.TaxContextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ProductPrintForm
             // 
             this.ProductPrintForm.DocumentName = "document";
@@ -675,7 +718,7 @@
             this.FinishButton.BackColor = System.Drawing.Color.Purple;
             this.FinishButton.Font = new System.Drawing.Font("Unispace", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FinishButton.ForeColor = System.Drawing.Color.White;
-            this.FinishButton.Location = new System.Drawing.Point(1841, 945);
+            this.FinishButton.Location = new System.Drawing.Point(1835, 945);
             this.FinishButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(173, 66);
@@ -683,16 +726,6 @@
             this.FinishButton.Text = "FINISH";
             this.FinishButton.UseVisualStyleBackColor = false;
             this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
-            // 
-            // DividerPictureBox
-            // 
-            this.DividerPictureBox.BackgroundImage = global::Assignment5.Properties.Resources.DividerLine;
-            this.PriceTableLayoutPanel.SetColumnSpan(this.DividerPictureBox, 3);
-            this.DividerPictureBox.Location = new System.Drawing.Point(3, 177);
-            this.DividerPictureBox.Name = "DividerPictureBox";
-            this.DividerPictureBox.Size = new System.Drawing.Size(978, 81);
-            this.DividerPictureBox.TabIndex = 10;
-            this.DividerPictureBox.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -729,39 +762,6 @@
             this.BackButton.Text = "BACK";
             this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
-            // 
-            // TotalContextLabel
-            // 
-            this.TotalContextLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TotalContextLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.TotalContextLabel.ForeColor = System.Drawing.Color.White;
-            this.TotalContextLabel.Location = new System.Drawing.Point(659, 261);
-            this.TotalContextLabel.Name = "TotalContextLabel";
-            this.TotalContextLabel.Size = new System.Drawing.Size(321, 87);
-            this.TotalContextLabel.TabIndex = 11;
-            this.TotalContextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PriceContextLabel
-            // 
-            this.PriceContextLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PriceContextLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.PriceContextLabel.ForeColor = System.Drawing.Color.White;
-            this.PriceContextLabel.Location = new System.Drawing.Point(659, 0);
-            this.PriceContextLabel.Name = "PriceContextLabel";
-            this.PriceContextLabel.Size = new System.Drawing.Size(321, 87);
-            this.PriceContextLabel.TabIndex = 12;
-            this.PriceContextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TaxContextLabel
-            // 
-            this.TaxContextLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TaxContextLabel.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.TaxContextLabel.ForeColor = System.Drawing.Color.White;
-            this.TaxContextLabel.Location = new System.Drawing.Point(659, 87);
-            this.TaxContextLabel.Name = "TaxContextLabel";
-            this.TaxContextLabel.Size = new System.Drawing.Size(321, 87);
-            this.TaxContextLabel.TabIndex = 13;
-            this.TaxContextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // OrderForm
             // 

@@ -145,7 +145,18 @@ namespace Assignment5.Views
 
         private void SelectForm_Actvated(object sender, EventArgs e)
         {
+            var rowIndex = MyProductDataGridView.CurrentCell.RowIndex;
 
+            foreach (DataGridViewRow row in MyProductDataGridView.Rows)
+            {
+                if (row.Cells[1].Value.ToString().Equals(Program.product.productID))
+                {
+                    rowIndex = row.Index;
+                    break;
+                }
+            }
+
+            MyProductDataGridView.Rows[rowIndex].Selected = true;
         }
     }
     }

@@ -173,6 +173,7 @@
             this.selectAnotherProductToolStripMenuItem.Name = "selectAnotherProductToolStripMenuItem";
             this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(296, 34);
             this.selectAnotherProductToolStripMenuItem.Text = "&Select Another Product";
+            this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this.SelectAnotherButton_Click);
             // 
             // ProductInfoGroupBox
             // 
