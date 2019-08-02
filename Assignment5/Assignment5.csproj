@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>DollarComputersIcon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\DollarComputersIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -153,16 +153,13 @@
     <None Include="Resources\E-Shop-5121.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\matrix-money1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\fin-serv-tech.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DividerLine.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DollarComputersIcon.ico" />
+    <Content Include="Resources\DollarComputersIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

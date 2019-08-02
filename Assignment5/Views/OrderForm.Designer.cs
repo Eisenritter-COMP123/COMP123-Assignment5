@@ -82,7 +82,7 @@
             this.TaxContextLabel = new System.Windows.Forms.Label();
             this.ProductPrintForm = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.FinishButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PCPictureBox = new System.Windows.Forms.PictureBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.OrderFormMenuStrip.SuspendLayout();
@@ -93,7 +93,7 @@
             this.YourPriceGroupBox.SuspendLayout();
             this.PriceTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DividerPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PCPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // OrderFormMenuStrip
@@ -727,13 +727,13 @@
             this.FinishButton.UseVisualStyleBackColor = false;
             this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
             // 
-            // pictureBox1
+            // PCPictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1018, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(996, 448);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.PCPictureBox.Location = new System.Drawing.Point(1018, 69);
+            this.PCPictureBox.Name = "PCPictureBox";
+            this.PCPictureBox.Size = new System.Drawing.Size(996, 448);
+            this.PCPictureBox.TabIndex = 7;
+            this.PCPictureBox.TabStop = false;
             // 
             // CancelButton
             // 
@@ -773,7 +773,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.CancelButton);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PCPictureBox);
             this.Controls.Add(this.FinishButton);
             this.Controls.Add(this.YourPriceGroupBox);
             this.Controls.Add(this.SystemComponentsPart2GroupBox);
@@ -797,7 +797,7 @@
             this.YourPriceGroupBox.ResumeLayout(false);
             this.PriceTableLayoutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DividerPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PCPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -856,7 +856,7 @@
         private System.Windows.Forms.PictureBox DividerPictureBox;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button CancelButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PCPictureBox;
         private System.Windows.Forms.Label TotalContextLabel;
         private System.Windows.Forms.Label PriceContextLabel;
         private System.Windows.Forms.Label TaxContextLabel;
