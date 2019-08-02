@@ -26,6 +26,7 @@ namespace Assignment5
         OS,
         PLATFORM,
         HDD_SIZE,
+        HDD_SPEED,
         GPU_TYPE,
         OPTICAL_DRIVE,
         AUDIO_TYPE,

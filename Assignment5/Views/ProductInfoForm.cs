@@ -35,6 +35,11 @@ namespace Assignment5.Views
 
         private void ProductInfoForm_Load(object sender, EventArgs e)
         {
+            LoadDatatoTextBox();
+        }
+
+        private void LoadDatatoTextBox()
+        {
             PIDTextBox.Text = Program.product.productID.ToString();
             ConditionTextBox.Text = Program.product.condition;
             CostTextbox.Text = $"${Program.product.cost:F2}";
@@ -67,28 +72,37 @@ namespace Assignment5.Views
                 //open the stream for writing
                 using (StreamWriter outputStream = new StreamWriter(File.Open(ProductInfoSaveFileDialog.FileName, FileMode.Create)))
                 {
-                    //writing all text box string to the file
-                    foreach (Control c in this.ProductInfoTableLayoutPanel.Controls)
-                    {
-                        if (c is TextBox)
-                        {
-                            outputStream.WriteLine(((TextBox)c).Text);
-                        }
-                    }
-                    foreach (Control c in this.TechSpecsTableLayoutMenu.Controls)
-                    {
-                        if (c is TextBox)
-                        {
-                            outputStream.WriteLine(((TextBox)c).Text);
-                        }
-                    }
-                    foreach (Control c in this.GeneralInfoTableLayoutPanel.Controls)
-                    {
-                        if (c is TextBox)
-                        {
-                            outputStream.WriteLine(((TextBox)c).Text);
-                        }
-                    }
+                    //Write to File
+                     outputStream.WriteLine(Program.product.productID         );
+                     outputStream.WriteLine(Program.product.cost              );
+                     outputStream.WriteLine(Program.product.model             );
+                     outputStream.WriteLine(Program.product.RAM_type          );
+                     outputStream.WriteLine(Program.product.RAM_size          );
+                     outputStream.WriteLine(Program.product.displaytype       );
+                     outputStream.WriteLine(Program.product.screensize        );
+                     outputStream.WriteLine(Program.product.resolution        );
+                     outputStream.WriteLine(Program.product.CPU_Class         );
+                     outputStream.WriteLine(Program.product.CPU_brand         );
+                     outputStream.WriteLine(Program.product.CPU_type          );
+                     outputStream.WriteLine(Program.product.CPU_speed         );
+                     outputStream.WriteLine(Program.product.condition         );
+                     outputStream.WriteLine(Program.product.OS                );
+                     outputStream.WriteLine(Program.product.platform          );
+                     outputStream.WriteLine(Program.product.HDD_size          );
+                     outputStream.WriteLine(Program.product.GPU_Type          );
+                     outputStream.WriteLine(Program.product.optical_drive     );
+                     outputStream.WriteLine(Program.product.Audio_type        );
+                     outputStream.WriteLine(Program.product.LAN               );
+                     outputStream.WriteLine(Program.product.WIFI              );
+                     outputStream.WriteLine(Program.product.width             );
+                     outputStream.WriteLine(Program.product.height            );
+                     outputStream.WriteLine(Program.product.depth             );
+                     outputStream.WriteLine(Program.product.weight            );
+                     outputStream.WriteLine(Program.product.moust_type        );
+                     outputStream.WriteLine(Program.product.power             );
+                     outputStream.WriteLine(Program.product.webcam            );
+                     outputStream.WriteLine(Program.product.manufacturer      );
+                     outputStream.WriteLine(Program.product.CPU_number);
                     //cleanup
                     outputStream.Close();
                     outputStream.Dispose();
@@ -118,30 +132,40 @@ namespace Assignment5.Views
                     using (StreamReader inputStream = new StreamReader(File.Open(ProductInfoOpenFileDialog.FileName, FileMode.Open)))
                     {
                         //Read from file
-                        foreach (Control c in this.ProductInfoTableLayoutPanel.Controls)
-                        {
-                            if (c is TextBox)
-                            {
-                                c.Text = inputStream.ReadLine();
-                            }
-                        }
-                        foreach (Control c in this.TechSpecsTableLayoutMenu.Controls)
-                        {
-                            if (c is TextBox)
-                            {
-                                c.Text = inputStream.ReadLine();
-                            }
-                        }
-                        foreach (Control c in this.GeneralInfoTableLayoutPanel.Controls)
-                        {
-                            if (c is TextBox)
-                            {
-                                c.Text = inputStream.ReadLine();
-                            }
-                        }
+                        Program.product.productID = short.Parse(inputStream.ReadLine());
+                        Program.product.cost=decimal.Parse(inputStream.ReadLine());
+                        Program.product.model=inputStream.ReadLine();
+                        Program.product.RAM_type=inputStream.ReadLine();
+                        Program.product.RAM_size=inputStream.ReadLine();
+                        Program.product.displaytype=inputStream.ReadLine();
+                        Program.product.screensize=inputStream.ReadLine();
+                        Program.product.resolution=inputStream.ReadLine();
+                        Program.product.CPU_Class=inputStream.ReadLine();
+                        Program.product.CPU_brand=inputStream.ReadLine();
+                        Program.product.CPU_type=inputStream.ReadLine();
+                        Program.product.CPU_speed=inputStream.ReadLine();
+                        Program.product.condition=inputStream.ReadLine();
+                        Program.product.OS=inputStream.ReadLine();
+                        Program.product.platform=inputStream.ReadLine();
+                        Program.product.HDD_size=inputStream.ReadLine();
+                        Program.product.GPU_Type=inputStream.ReadLine();
+                        Program.product.optical_drive=inputStream.ReadLine();
+                        Program.product.Audio_type=inputStream.ReadLine();
+                        Program.product.LAN=inputStream.ReadLine();
+                        Program.product.WIFI=inputStream.ReadLine();
+                        Program.product.width=inputStream.ReadLine();
+                        Program.product.height=inputStream.ReadLine();
+                        Program.product.depth=inputStream.ReadLine();
+                        Program.product.weight=inputStream.ReadLine();
+                        Program.product.moust_type=inputStream.ReadLine();
+                        Program.product.power=inputStream.ReadLine();
+                        Program.product.webcam=inputStream.ReadLine();
+                        Program.product.manufacturer=inputStream.ReadLine();
+                        Program.product.CPU_number=inputStream.ReadLine();
                         //Clean up
                         inputStream.Close();
                         inputStream.Dispose();
+                        LoadDatatoTextBox();
                     }
                 }
                 catch (IOException exception)

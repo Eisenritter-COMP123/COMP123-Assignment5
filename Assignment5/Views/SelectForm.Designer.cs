@@ -35,12 +35,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectForm));
             this.SelectionLabel = new System.Windows.Forms.Label();
             this.MyProductDataGridView = new System.Windows.Forms.DataGridView();
-            this.SelectedLabel = new System.Windows.Forms.Label();
-            this.HardwareText = new System.Windows.Forms.TextBox();
-            this.CancelButton = new System.Windows.Forms.Button();
-            this.NextButton = new System.Windows.Forms.Button();
-            this.printForm1 = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
-            this.TableLoadTimer = new System.Windows.Forms.Timer(this.components);
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +67,12 @@
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SelectedLabel = new System.Windows.Forms.Label();
+            this.HardwareText = new System.Windows.Forms.TextBox();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.printForm1 = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
+            this.TableLoadTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.MyProductDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -168,72 +168,6 @@
             this.MyProductDataGridView.Size = new System.Drawing.Size(2000, 677);
             this.MyProductDataGridView.TabIndex = 1;
             this.MyProductDataGridView.SelectionChanged += new System.EventHandler(this.MyProductDataGridView_SelectionChanged);
-            // 
-            // SelectedLabel
-            // 
-            this.SelectedLabel.BackColor = System.Drawing.Color.Black;
-            this.SelectedLabel.Font = new System.Drawing.Font("Unispace", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectedLabel.ForeColor = System.Drawing.Color.White;
-            this.SelectedLabel.Location = new System.Drawing.Point(12, 861);
-            this.SelectedLabel.Name = "SelectedLabel";
-            this.SelectedLabel.Size = new System.Drawing.Size(395, 52);
-            this.SelectedLabel.TabIndex = 3;
-            this.SelectedLabel.Text = "Selected Parts:";
-            this.SelectedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SelectedLabel.Click += new System.EventHandler(this.Label1_Click);
-            // 
-            // HardwareText
-            // 
-            this.HardwareText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HardwareText.Location = new System.Drawing.Point(413, 861);
-            this.HardwareText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HardwareText.Name = "HardwareText";
-            this.HardwareText.ReadOnly = true;
-            this.HardwareText.Size = new System.Drawing.Size(1601, 48);
-            this.HardwareText.TabIndex = 4;
-            this.HardwareText.TextChanged += new System.EventHandler(this.HardwareText_TextChanged);
-            // 
-            // CancelButton
-            // 
-            this.CancelButton.BackColor = System.Drawing.Color.Red;
-            this.CancelButton.Font = new System.Drawing.Font("Unispace", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelButton.ForeColor = System.Drawing.Color.White;
-            this.CancelButton.Location = new System.Drawing.Point(1653, 928);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(173, 66);
-            this.CancelButton.TabIndex = 5;
-            this.CancelButton.Text = "CANCEL";
-            this.CancelButton.UseVisualStyleBackColor = false;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
-            // NextButton
-            // 
-            this.NextButton.BackColor = System.Drawing.Color.SteelBlue;
-            this.NextButton.Enabled = false;
-            this.NextButton.Font = new System.Drawing.Font("Unispace", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextButton.ForeColor = System.Drawing.Color.White;
-            this.NextButton.Location = new System.Drawing.Point(1850, 928);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(164, 66);
-            this.NextButton.TabIndex = 6;
-            this.NextButton.Text = "NEXT";
-            this.NextButton.UseVisualStyleBackColor = false;
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
-            // 
-            // printForm1
-            // 
-            this.printForm1.DocumentName = "document";
-            this.printForm1.Form = this;
-            this.printForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter;
-            this.printForm1.PrinterSettings = ((System.Drawing.Printing.PrinterSettings)(resources.GetObject("printForm1.PrinterSettings")));
-            this.printForm1.PrintFileName = null;
-            // 
-            // TableLoadTimer
-            // 
-            this.TableLoadTimer.Interval = 500;
-            this.TableLoadTimer.Tick += new System.EventHandler(this.TableLoadTimer_Tick);
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -578,6 +512,72 @@
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(Assignment5.Models.Product);
+            // 
+            // SelectedLabel
+            // 
+            this.SelectedLabel.BackColor = System.Drawing.Color.Black;
+            this.SelectedLabel.Font = new System.Drawing.Font("Unispace", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectedLabel.ForeColor = System.Drawing.Color.White;
+            this.SelectedLabel.Location = new System.Drawing.Point(12, 861);
+            this.SelectedLabel.Name = "SelectedLabel";
+            this.SelectedLabel.Size = new System.Drawing.Size(395, 52);
+            this.SelectedLabel.TabIndex = 3;
+            this.SelectedLabel.Text = "Selected Parts:";
+            this.SelectedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SelectedLabel.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // HardwareText
+            // 
+            this.HardwareText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HardwareText.Location = new System.Drawing.Point(413, 861);
+            this.HardwareText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HardwareText.Name = "HardwareText";
+            this.HardwareText.ReadOnly = true;
+            this.HardwareText.Size = new System.Drawing.Size(1601, 48);
+            this.HardwareText.TabIndex = 4;
+            this.HardwareText.TextChanged += new System.EventHandler(this.HardwareText_TextChanged);
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.BackColor = System.Drawing.Color.Red;
+            this.CancelButton.Font = new System.Drawing.Font("Unispace", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelButton.ForeColor = System.Drawing.Color.White;
+            this.CancelButton.Location = new System.Drawing.Point(1653, 928);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(173, 66);
+            this.CancelButton.TabIndex = 5;
+            this.CancelButton.Text = "CANCEL";
+            this.CancelButton.UseVisualStyleBackColor = false;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // NextButton
+            // 
+            this.NextButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.NextButton.Enabled = false;
+            this.NextButton.Font = new System.Drawing.Font("Unispace", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.ForeColor = System.Drawing.Color.White;
+            this.NextButton.Location = new System.Drawing.Point(1850, 928);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(164, 66);
+            this.NextButton.TabIndex = 6;
+            this.NextButton.Text = "NEXT";
+            this.NextButton.UseVisualStyleBackColor = false;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // printForm1
+            // 
+            this.printForm1.DocumentName = "document";
+            this.printForm1.Form = this;
+            this.printForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter;
+            this.printForm1.PrinterSettings = ((System.Drawing.Printing.PrinterSettings)(resources.GetObject("printForm1.PrinterSettings")));
+            this.printForm1.PrintFileName = null;
+            // 
+            // TableLoadTimer
+            // 
+            this.TableLoadTimer.Interval = 500;
+            this.TableLoadTimer.Tick += new System.EventHandler(this.TableLoadTimer_Tick);
             // 
             // SelectForm
             // 

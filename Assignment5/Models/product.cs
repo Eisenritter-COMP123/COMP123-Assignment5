@@ -99,5 +99,7 @@ namespace Assignment5.Models
 
         [StringLength(255)]
         public string webcam { get; set; }
+
     }
+ 
 }

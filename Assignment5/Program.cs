@@ -38,6 +38,7 @@ namespace Assignment5
             product = new Product();
 
             Application.Run(Forms[FormNames.SPLASH_SCREEN]);
+
         }
     }
 }
