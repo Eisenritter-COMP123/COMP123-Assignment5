@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* Created By:      George Zhou
+ * Student Number:  300613283
+ * Date Last Modified: August 16, 2019
+ * This program gets database from store and lets customer choose their order, and proceed to save, load, and place their order
+ * Revision:        1.1
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace Assignment5
 {
+    //This enum stores the computer datas
     enum Computer
     {
         ID,

@@ -1,8 +1,8 @@
 ﻿/* Created By:      George Zhou
  * Student Number:  300613283
- * Date Last Modified: July 26, 2019
- * This program calculates the user's BMI after user inputs their weight and height
- * Revision:        1.0
+ * Date Last Modified: August 16, 2019
+ * This program gets database from store and lets customer choose their order, and proceed to save, load, and place their order
+ * Revision:        1.1
  */
 using System;
 using System.Collections.Generic;
@@ -27,7 +27,10 @@ namespace Assignment5
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            //Initiate a new dictionary of Form Names
             Forms = new Dictionary<FormNames, Form>();
+
+            //Add the Various forms into the dictionary
             Forms.Add(FormNames.SPLASH_SCREEN, new Views.SplashScreen());
             Forms.Add(FormNames.START_FORM, new Views.StartForm());
             Forms.Add(FormNames.SELECT_FORM, new Views.SelectForm());
@@ -35,6 +38,7 @@ namespace Assignment5
             Forms.Add(FormNames.ORDER_FORM, new Views.OrderForm());
             Forms.Add(FormNames.ABOUT_FORM, new Views.AboutForm());
 
+            //Initiate a new Product
             product = new Product();
 
             Application.Run(Forms[FormNames.SPLASH_SCREEN]);

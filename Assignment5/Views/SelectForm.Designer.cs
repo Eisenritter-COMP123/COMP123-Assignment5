@@ -73,7 +73,6 @@
             this.NextButton = new System.Windows.Forms.Button();
             this.printForm1 = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.TableLoadTimer = new System.Windows.Forms.Timer(this.components);
-            this.SelectLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MyProductDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -578,15 +577,6 @@
             this.TableLoadTimer.Interval = 500;
             this.TableLoadTimer.Tick += new System.EventHandler(this.TableLoadTimer_Tick);
             // 
-            // SelectLabel
-            // 
-            this.SelectLabel.BackColor = System.Drawing.Color.White;
-            this.SelectLabel.Location = new System.Drawing.Point(12, 654);
-            this.SelectLabel.Name = "SelectLabel";
-            this.SelectLabel.Size = new System.Drawing.Size(623, 31);
-            this.SelectLabel.TabIndex = 7;
-            this.SelectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // SelectForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -595,7 +585,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1006, 721);
             this.ControlBox = false;
-            this.Controls.Add(this.SelectLabel);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.HardwareText);
@@ -657,6 +646,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn webcamDataGridViewTextBoxColumn;
         private Microsoft.VisualBasic.PowerPacks.Printing.PrintForm printForm1;
         private System.Windows.Forms.Timer TableLoadTimer;
-        private System.Windows.Forms.Label SelectLabel;
     }
 }

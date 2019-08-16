@@ -259,7 +259,6 @@
             this.PlatformLabel.TabIndex = 4;
             this.PlatformLabel.Text = "Platform";
             this.PlatformLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.PlatformLabel.Click += new System.EventHandler(this.PlatformLabel_Click);
             // 
             // ManufacturerLabel
             // 

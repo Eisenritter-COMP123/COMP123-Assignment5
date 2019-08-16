@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* Created By:      George Zhou
+ * Student Number:  300613283
+ * Date Last Modified: August 16, 2019
+ * This program gets database from store and lets customer choose their order, and proceed to save, load, and place their order
+ * Revision:        1.1
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,28 +26,37 @@ namespace Assignment5.Views
             InitializeComponent();
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public bool HasLoadedDataSource()
         {
             return false;
         }
 
+        /// <summary>
+        /// This Button Click Event Quits the Application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// This Button Click Event Loads the Product Info Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.Forms[FormNames.PRODUCTINFO_FORM].Show();
         }
 
-
+        /// <summary>
+        /// This event fires when the Select form loads and loads the Database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectForm_Load(object sender, EventArgs e)
         {
             using (var db = new DollarComputersContext())
@@ -54,9 +69,16 @@ namespace Assignment5.Views
 
             }
             //Set initial selection to null
+
+            //Do not select any data when first load
             MyProductDataGridView.CurrentCell.Selected=false;
         }
 
+        /// <summary>
+        /// This Event fires whenever the user changes their selction on the data grid view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MyProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             //Run this function only if the data is loaded
@@ -70,12 +92,14 @@ namespace Assignment5.Views
 
                 rows[rowIndex].Selected = true;
 
+                //Save the product info to memory
                 SaveProductToMemory(cells);
 
                 HardwareText.Text = $"{Program.product.manufacturer} - {Program.product.model} \t Price: {Convert.ToDouble(Program.product.cost.ToString()):C2}";
             }
         }
 
+        //This function sets the product property values
         private static void SaveProductToMemory(DataGridViewCellCollection cells)
         {
             Program.product.productID = short.Parse(cells[(int)Computer.ID].Value.ToString());
@@ -121,6 +145,11 @@ namespace Assignment5.Views
             _dataLoaded = true;
         }
 
+        /// <summary>
+        /// When the Text of this text box is changed, it allows user to click the next button.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HardwareText_TextChanged(object sender, EventArgs e)
         {
             NextButton.Enabled = true;

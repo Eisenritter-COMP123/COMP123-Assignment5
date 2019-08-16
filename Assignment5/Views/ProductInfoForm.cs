@@ -1,4 +1,11 @@
-﻿using System;
+﻿/* Created By:      George Zhou
+ * Student Number:  300613283
+ * Date Last Modified: August 16, 2019
+ * This program gets database from store and lets customer choose their order, and proceed to save, load, and place their order
+ * Revision:        1.1
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,27 +24,27 @@ namespace Assignment5.Views
         {
             InitializeComponent();
         }
-
-        private void PIDLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PIDTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Quit the Application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// When this from loads, it loads all the data into is its textboxes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductInfoForm_Load(object sender, EventArgs e)
         {
             LoadDatatoTextBox();
         }
 
+        //LoadDataToTextBox loads product values into the TextBox
         private void LoadDatatoTextBox()
         {
             PIDTextBox.Text = Program.product.productID.ToString();
@@ -58,6 +65,11 @@ namespace Assignment5.Views
             WebCamTextBox.Text = Program.product.webcam;
         }
 
+        /// <summary>
+        /// This Save File Event fire when clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //configure the file dialog
@@ -111,10 +123,13 @@ namespace Assignment5.Views
                     MessageBox.Show("File Saved...", "Saving File...", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-
-           
         }
 
+        /// <summary>
+        /// This Open File Event when Open from menu is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //configure the file dialog
@@ -175,12 +190,22 @@ namespace Assignment5.Views
             }
         }
 
+        /// <summary>
+        /// This button event go back to the select form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectAnotherButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.Forms[FormNames.SELECT_FORM].Show();
         }
 
+        /// <summary>
+        /// This button event Loads the order form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
             this.Hide();

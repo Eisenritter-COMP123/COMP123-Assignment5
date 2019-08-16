@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* Created By:      George Zhou
+ * Student Number:  300613283
+ * Date Last Modified: August 16, 2019
+ * This program gets database from store and lets customer choose their order, and proceed to save, load, and place their order
+ * Revision:        1.1
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,12 +24,22 @@ namespace Assignment5.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// The Button Click Event loads the select order form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StartOrderButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.Forms[FormNames.SELECT_FORM].Show();
         }
 
+        /// <summary>
+        /// This Button Click Event opens file dialog and loads the proper user defined text file, then it proceed to open the product info form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoadOrderButton_Click(object sender, EventArgs e)
         {
             //configure the file dialog
@@ -87,6 +103,11 @@ namespace Assignment5.Views
                
         }
 
+        /// <summary>
+        /// Quit the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
